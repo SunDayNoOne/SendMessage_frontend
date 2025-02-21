@@ -39,8 +39,8 @@ import { RouterLink } from 'vue-router';
         align-items: center;
         background-color: rgba(226, 226, 226, 0.849);
         border-radius: 30px;
-        width: 50%;
-        height: 30%;
+        width: 45%;
+        height: 28%;
 
 
         .text_containeer {
@@ -84,7 +84,7 @@ import { RouterLink } from 'vue-router';
                 height: 100%;
                 border: none;
                 background-color: #FF977A;
-                border-radius: 15px;
+                border-radius: 10px;
                 transition-property: opacity;
                 transition-duration: 0.3s;
 
