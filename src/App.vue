@@ -4,9 +4,20 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <RouterView v-slot="{Component}">
-    <component :is="Component"/>
-  </RouterView>/>
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </RouterView>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 </style>
