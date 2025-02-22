@@ -25,6 +25,7 @@ import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
                 </div>
             </div>
             <div class="about_containeer">
+                <router-link to="/" class="goBackContaineer"><button class="goBackButton">Go Back</button></router-link>
                 <div class="header-about_containeer">
                     <Logo style="width: 128px; height: 128px;" />
                     <h1>SendMessage</h1>
@@ -201,8 +202,42 @@ import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
 
+            .goBackContaineer{
+                    display: flex;
+                    align-self: flex-end;
+                    margin-top: 30px;
+                    margin-right: 30px;
+                    width: 10%;
+                    height: 5%;
+                    text-decoration: none;
+                    transition-property: width, opacity;
+                    transition-duration: 0.5s, 0.5s;
+
+                    &:hover{
+                            width: 11%;
+                            opacity: 70%;
+                        }
+
+                    .goBackButton{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'Roboto';
+                        font-style: italic;
+                        font-size: 1em;
+                        width: 100%;
+                        height: 100%;
+                        border: none;
+                        border-radius: 10px;
+                        background-color:#FF977A ;
+                        
+
+
+                    }
+                }
+
             .header-about_containeer {
-                margin-top: 7%;
+                margin-top: 3%;
                 width: 100%;
                 height: 25%;
                 display: flex;
@@ -211,6 +246,7 @@ import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
                 align-items: center;
                 font-size: 1.8em;
                 color: #231F20;
+
             }
 
             .description-about_containeer{
