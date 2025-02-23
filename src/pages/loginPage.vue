@@ -5,6 +5,17 @@ import vkIcon from '@/components/icons/about_icons/vkIcon.vue';
 import GitHubIcon from '@/components/icons/about_icons/GitHubIcon.vue';
 import TelegramIcon from '@/components/icons/about_icons/TelegramIcon.vue';
 import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
+const User = new Object({
+    auth: false,
+    login: '',
+    password: ''
+})
+
+const validateFunc = function(){
+    const login_inp =  document.getElementsByName("input_login");
+    console.log(`Содержимое инпута: `, login_inp.value);
+}
+
 </script>
 
 <template>
@@ -13,14 +24,14 @@ import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
             <div class="form_containeer">
                 <div class="form-login_containeer">
                     <label for="login">Login</label>
-                    <input type="text" class="input_login" name="login" placeholder="Login">
+                    <input type="text" id="input_login" class="input_login" name="login" placeholder="Login">
                 </div>
                 <div class="form-password_containeer">
                     <label for="password">Password</label>
-                    <input type="password" class="input_password" name="password" placeholder="Password">
+                    <input type="password" id="input_password" class="input_password" name="password" placeholder="Password">
                 </div>
                 <div class="login-button_containeer">
-                    <RouterLink to="/main" class="link-login"><button class="Login_button">Login</button></RouterLink>
+                    <RouterLink to="/main" class="link-login"><button class="Login_button" @click="validateFunc">Login</button></RouterLink>
                     <RouterLink to="/reg" class="link-singin"><button class="SigIn_button">Sing In</button></RouterLink>
                 </div>
             </div>
@@ -53,6 +64,7 @@ import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
 </template>
 
 <style scoped lang="scss">
+
 .loginPage_containeer {
     display: flex;
     justify-content: center;
