@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router';
 import Logo from '@/components/logos/Logo.vue';
-import vkIcon from '@/components/icons/about_icons/vkIcon.vue';
+import vkIcon from '@/components/icons/about_icons/VkIcon.vue';
 import GitHubIcon from '@/components/icons/about_icons/GitHubIcon.vue';
 import TelegramIcon from '@/components/icons/about_icons/TelegramIcon.vue';
 import GmailIcon from '@/components/icons/about_icons/GmailIcon.vue';
@@ -11,8 +11,8 @@ const User = new Object({
     password: ''
 })
 
-const validateFunc = function(){
-    const login_inp =  document.getElementsByName("input_login");
+const validateFunc = function () {
+    const login_inp = document.getElementsByName("input_login");
     console.log(`Содержимое инпута: `, login_inp.value);
 }
 
@@ -28,10 +28,12 @@ const validateFunc = function(){
                 </div>
                 <div class="form-password_containeer">
                     <label for="password">Password</label>
-                    <input type="password" id="input_password" class="input_password" name="password" placeholder="Password">
+                    <input type="password" id="input_password" class="input_password" name="password"
+                        placeholder="Password">
                 </div>
                 <div class="login-button_containeer">
-                    <RouterLink to="/main" class="link-login"><button class="Login_button" @click="validateFunc">Login</button></RouterLink>
+                    <RouterLink to="/main" class="link-login"><button class="Login_button"
+                            @click="validateFunc">Login</button></RouterLink>
                     <RouterLink to="/reg" class="link-singin"><button class="SigIn_button">Sing In</button></RouterLink>
                 </div>
             </div>
@@ -54,7 +56,7 @@ const validateFunc = function(){
                     <div class="icons_contact-about_containeer">
                         <vkIcon />
                         <GitHubIcon />
-                        <TelegramIcon/>
+                        <TelegramIcon />
                         <GmailIcon />
                     </div>
                 </div>
@@ -64,7 +66,6 @@ const validateFunc = function(){
 </template>
 
 <style scoped lang="scss">
-
 .loginPage_containeer {
     display: flex;
     justify-content: center;
@@ -214,39 +215,39 @@ const validateFunc = function(){
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
 
-            .goBackContaineer{
-                    display: flex;
-                    align-self: flex-end;
-                    margin-top: 30px;
-                    margin-right: 30px;
-                    width: 10%;
-                    height: 5%;
-                    text-decoration: none;
-                    transition-property: width, opacity;
-                    transition-duration: 0.5s, 0.5s;
+            .goBackContaineer {
+                display: flex;
+                align-self: flex-end;
+                margin-top: 30px;
+                margin-right: 30px;
+                width: 10%;
+                height: 5%;
+                text-decoration: none;
+                transition-property: width, opacity;
+                transition-duration: 0.5s, 0.5s;
 
-                    &:hover{
-                            width: 11%;
-                            opacity: 70%;
-                        }
-
-                    .goBackButton{
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        font-family: 'Roboto';
-                        font-style: italic;
-                        font-size: 1em;
-                        width: 100%;
-                        height: 100%;
-                        border: none;
-                        border-radius: 10px;
-                        background-color:#FF977A ;
-                        
-
-
-                    }
+                &:hover {
+                    width: 11%;
+                    opacity: 70%;
                 }
+
+                .goBackButton {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: 'Roboto';
+                    font-style: italic;
+                    font-size: 1em;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                    border-radius: 10px;
+                    background-color: #FF977A;
+
+
+
+                }
+            }
 
             .header-about_containeer {
                 margin-top: 3%;
@@ -261,7 +262,7 @@ const validateFunc = function(){
 
             }
 
-            .description-about_containeer{
+            .description-about_containeer {
                 width: 70%;
                 height: 15%;
                 margin-top: -2%;
@@ -272,7 +273,7 @@ const validateFunc = function(){
                 font-size: 1.4em;
             }
 
-            .contact-about_containeer{
+            .contact-about_containeer {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -281,7 +282,7 @@ const validateFunc = function(){
                 width: 100%;
                 height: 15%;
 
-                .icons_contact-about_containeer{
+                .icons_contact-about_containeer {
                     display: flex;
                     flex-direction: row;
                     width: 100%;
@@ -289,7 +290,7 @@ const validateFunc = function(){
                     align-items: center;
                     gap: 30px;
 
-                    a{
+                    a {
                         margin-top: 20px;
                         width: 64px;
                         height: 64px;
@@ -297,9 +298,9 @@ const validateFunc = function(){
                         transition-property: opacity;
                         transition-duration: 0.3s;
 
-                        &:hover{
+                        &:hover {
                             opacity: 50%;
-                            
+
                         }
                     }
                 }
